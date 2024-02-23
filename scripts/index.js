@@ -1,8 +1,5 @@
 import { supabase } from "./supabase";
 
-console.log('asdasd')
-
-
 
 //Crear usuario
 document.getElementById('form').addEventListener('submit', async(e) => {
@@ -41,3 +38,14 @@ document.getElementById('form-lg').addEventListener('submit', async(e) => {
     }
 })
 
+$(document).ready(function(){
+    $('#switchToggle').change(function(){
+      if(this.checked) {
+        $('#login-form').show();
+        $('#signup-form').hide();
+      } else {
+        $('#login-form').hide();
+        $('#signup-form').show();
+      }
+    });
+  });
